@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { Home } from './components/Home';
+import { ContactUs } from './components/ContactUs';
 
 function App() {
+  var contact=[{
+    name:"deep",
+    age:24,
+    contact:1354689
+  },
+  {
+    name:"manan",
+    age:26,
+    contact:1354333
+  },
+  {
+    name:"fenil",
+    age:21,
+    contact:1354555
+  }
+]
+var company='royal';
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home contactPersons={contact} company={company}/>
+      
+      
     </div>
   );
 }
