@@ -1,13 +1,13 @@
 import React from 'react'
 import { ContactUs } from './ContactUs'
 
-export const Home = ({contactPersons},{company}) => {
+export const Home = (props) => {
     
    
   return (
     <div>
-        <h1 style={{color:'red',background:'blue'}}>{company}</h1>
-        <ContactUs contactPersons={contactPersons}/>
+        <h1 style={{color:'red',background:'blue',height:"70px"}}>{props.company}</h1>
+        <ContactUs contactPersons={props.contactPersons}/>
     </div>
   )
 }

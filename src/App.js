@@ -2,30 +2,61 @@ import logo from './logo.svg';
 import './App.css';
 import { Home } from './components/Home';
 import { ContactUs } from './components/ContactUs';
+import { Routes, Route } from 'react-router-dom';
+import { Movies } from './components/Movies';
+import { MenuBar} from './components/MenuBar';
+import { MoviesDetail } from './components/MoviesDetail';
 
 function App() {
-  var contact=[{
-    name:"deep",
-    age:24,
-    contact:1354689
-  },
-  {
-    name:"manan",
-    age:26,
-    contact:1354333
-  },
-  {
-    name:"fenil",
-    age:21,
-    contact:1354555
-  }
-]
-var company='royal';
+ 
+  //   var contact=[{
+  //     name:"deep",
+  //     age:24,
+  //     contact:1354689,
+  //     gender:"Male"
+  //   },
+  //   {
+  //     name:"manan",
+  //     age:21,
+  //     contact:1354333,
+  //     gender:"Male"
+  //   },
+  //   {
+  //     name:"fenil",
+  //     age:20,
+  //     contact:1354555,
+  //     gender:"Male"
+  //   },
+  //   {
+  //     name:"maharshi",
+  //     age:29,
+  //     contact:45654555,
+  //     gender:"Male"
+  //   },
+  //   {
+  //     name:"tirth",
+  //     age:35,
+  //     contact:8554555,
+  //     gender:"Male"
+  //   },
+  //   {
+  //     name:"arya",
+  //     age:16,
+  //     contact:9654555,
+  //     gender:"Male"
+  //   }
+  // ]
+  // var company='Royal Technosoft';
   return (
     <div className="App">
-      <Home contactPersons={contact} company={company}/>
       
-      
+      <MenuBar/>
+      <Routes>
+        <Route path='/movies' element={<Movies/>}></Route>
+        <Route path='/movies/moviedetail/:id' element={<MoviesDetail/>}></Route>
+      </Routes>
+
+
     </div>
   );
 }
