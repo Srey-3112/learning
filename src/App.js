@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Movies } from './components/Movies';
 import { MenuBar} from './components/MenuBar';
 import { MoviesDetail } from './components/MoviesDetail';
+import { SampleForm } from './Form/SampleForm';
 
 function App() {
  
@@ -50,7 +51,8 @@ function App() {
   return (
     <div className="App">
       
-      <MenuBar/>
+      {/* <MenuBar/> */}
+      <SampleForm/>
       <Routes>
         <Route path='/movies' element={<Movies/>}></Route>
         <Route path='/movies/moviedetail/:id' element={<MoviesDetail/>}></Route>
