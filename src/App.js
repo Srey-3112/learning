@@ -7,6 +7,7 @@ import { Movies } from './components/Movies';
 import { MenuBar} from './components/MenuBar';
 import { MoviesDetail } from './components/MoviesDetail';
 import { SampleForm } from './Form/SampleForm';
+import { EmployeeDetail } from './Form/EmployeeDetail';
 
 function App() {
  
@@ -56,6 +57,7 @@ function App() {
       <Routes>
         <Route path='/movies' element={<Movies/>}></Route>
         <Route path='/movies/moviedetail/:id' element={<MoviesDetail/>}></Route>
+        <Route path='/employeeDetail/:id' element={<EmployeeDetail/>}></Route>
       </Routes>
 
 
