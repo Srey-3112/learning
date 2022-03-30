@@ -7,6 +7,7 @@ export const EmployeeDetail = () => {
     <div>
         <h1>detail</h1>
         <h1>Id={id}</h1>
+        
     </div>
   )
 }
